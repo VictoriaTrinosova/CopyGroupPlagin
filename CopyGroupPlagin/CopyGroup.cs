@@ -34,7 +34,7 @@ namespace CopyGroupPlagin
                 XYZ point = uiDoc.Selection.PickPoint("Выберете точку");
                 Room room1 = GetRoomByPoint(doc, point);
                 XYZ room1Center = GetElementCenter(room1);
-                XYZ centerPoint = groupCenter - offset;
+                XYZ centerPoint = room1Center + offset;
 
                 Transaction transaction = new Transaction(doc);
                 transaction.Start("Копирование группы объектов");
